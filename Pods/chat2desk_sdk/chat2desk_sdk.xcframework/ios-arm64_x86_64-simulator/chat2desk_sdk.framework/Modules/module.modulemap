@@ -1,0 +1,6 @@
+framework module chat2desk_sdk {
+    umbrella header "chat2desk_sdk.h"
+
+    export *
+    module * { export * }
+}

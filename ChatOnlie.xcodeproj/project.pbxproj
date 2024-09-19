@@ -11,6 +11,7 @@
 		71839FDC2C9BFA1F0018FECD /* ChatOnlie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71839FD12C9BFA1F0018FECD /* ChatOnlie.framework */; };
 		71839FE12C9BFA1F0018FECD /* ChatOnlieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71839FE02C9BFA1F0018FECD /* ChatOnlieTests.swift */; };
 		71839FE22C9BFA1F0018FECD /* ChatOnlie.h in Headers */ = {isa = PBXBuildFile; fileRef = 71839FD42C9BFA1F0018FECD /* ChatOnlie.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E67532DFFC73286928039C63 /* Pods_ChatOnlie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053407082A2CED8BB5F70A69 /* Pods_ChatOnlie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053407082A2CED8BB5F70A69 /* Pods_ChatOnlie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatOnlie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29529B5139ACF03245101E12 /* Pods-ChatOnlie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatOnlie.release.xcconfig"; path = "Target Support Files/Pods-ChatOnlie/Pods-ChatOnlie.release.xcconfig"; sourceTree = "<group>"; };
+		5A83E01E438EEB7DAEABECBB /* Pods-ChatOnlie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatOnlie.debug.xcconfig"; path = "Target Support Files/Pods-ChatOnlie/Pods-ChatOnlie.debug.xcconfig"; sourceTree = "<group>"; };
 		71839FD12C9BFA1F0018FECD /* ChatOnlie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChatOnlie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71839FD42C9BFA1F0018FECD /* ChatOnlie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatOnlie.h; sourceTree = "<group>"; };
 		71839FD52C9BFA1F0018FECD /* ChatOnlie.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ChatOnlie.docc; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67532DFFC73286928039C63 /* Pods_ChatOnlie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 				71839FD32C9BFA1F0018FECD /* ChatOnlie */,
 				71839FDF2C9BFA1F0018FECD /* ChatOnlieTests */,
 				71839FD22C9BFA1F0018FECD /* Products */,
+				859D3ED876B018E51512CE7F /* Pods */,
+				FA9194F9F07F1A8AA082EFFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +92,23 @@
 			path = ChatOnlieTests;
 			sourceTree = "<group>";
 		};
+		859D3ED876B018E51512CE7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A83E01E438EEB7DAEABECBB /* Pods-ChatOnlie.debug.xcconfig */,
+				29529B5139ACF03245101E12 /* Pods-ChatOnlie.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA9194F9F07F1A8AA082EFFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				053407082A2CED8BB5F70A69 /* Pods_ChatOnlie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -103,6 +127,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71839FE52C9BFA1F0018FECD /* Build configuration list for PBXNativeTarget "ChatOnlie" */;
 			buildPhases = (
+				C32A8D5B3438292C51FE9F42 /* [CP] Check Pods Manifest.lock */,
 				71839FCC2C9BFA1F0018FECD /* Headers */,
 				71839FCD2C9BFA1F0018FECD /* Sources */,
 				71839FCE2C9BFA1F0018FECD /* Frameworks */,
@@ -189,6 +214,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C32A8D5B3438292C51FE9F42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatOnlie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71839FCD2C9BFA1F0018FECD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -255,7 +305,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -319,7 +369,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -339,6 +389,7 @@
 		};
 		71839FE62C9BFA1F0018FECD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A83E01E438EEB7DAEABECBB /* Pods-ChatOnlie.debug.xcconfig */;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -380,6 +431,7 @@
 		};
 		71839FE72C9BFA1F0018FECD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29529B5139ACF03245101E12 /* Pods-ChatOnlie.release.xcconfig */;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
